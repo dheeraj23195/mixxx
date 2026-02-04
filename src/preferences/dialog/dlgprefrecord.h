@@ -49,6 +49,9 @@ class DlgPrefRecord : public DlgPreferencePage, public Ui::DlgPrefRecordDlg  {
     void saveUseCueFile();
     void saveUseCueFileAnnotation();
     void saveSplitSize();
+    void loadChannelMode();
+    void saveChannelMode();
+
 
     // Pointer to config object
     UserSettingsPointer m_pConfig;
