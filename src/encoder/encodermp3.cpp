@@ -208,9 +208,7 @@ int EncoderMp3::initEncoder(mixxx::audio::SampleRate sampleRate,int channels, QS
         qDebug() << "EncoderMp3: forcing MONO (channels = 1)";
     } else {
         // channels == 2
-        if (m_stereo_mode == MONO) {
-            m_stereo_mode = JOINT_STEREO;
-        }
+        m_stereo_mode = JOINT_STEREO;
         qDebug() << "EncoderMp3: stereo encoding (channels = 2)";
     }
     lame_set_mode(m_lameFlags, m_stereo_mode);
